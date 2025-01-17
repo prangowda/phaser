@@ -1,5 +1,9 @@
-var v = require('vivid-cli');
+const v = require('vivid-cli');
 
+// Get current date and time
+const now = new Date().toLocaleString();
+
+// Header
 v.log('{bgYellow}{black} __________.__                                 ________   ');
 v.log('{bgYellow}{black} \\______   \\  |__ _____    ______ ___________  \\_____  \\  ');
 v.log('{bgYellow}{black}  |     ___/  |  \\\\__  \\  /  ___// __ \\_  __ \\   _(__  <  ');
@@ -7,7 +11,10 @@ v.log('{bgYellow}{black}  |    |   |   Y  \\/ __ \\_\\___ \\\\  ___/|  | \\/  / 
 v.log('{bgYellow}{black}  |____|   |___|  (____  /____  >\\___  >__|    /______  / ');
 v.log('{bgYellow}{black}                \\/     \\/     \\/     \\/               \\/  ');
 v.log('{bgYellow}{black} Available commands:                                      ');
+v.log(`{white}{bgBlue} Current Date & Time: ${now} `);
+v.log('-------------------------------------------------------------------');
 
+// Commands
 v.log('{white} npm run {green}build {cyan}   Build dev version of Phaser with Webpack');
 v.log('{white} npm run {green}watch {cyan}      Build dev & put Webpack in watch mode');
 v.log('{white} npm run {green}dist {cyan}               Build dist versions of Phaser');
@@ -38,4 +45,8 @@ v.log('{white} npm run {green}build-tsgen {cyan}     Build the TypeScript Defs p
 v.log('{white} npm run {green}tsgen {cyan}               Generate the TypeScript Defs');
 v.log('{white} npm run {green}test-ts {cyan}                 Test the TypeScript Defs');
 
+v.log('-------------------------------------------------------------------');
 v.log('{bgYellow}{black} https://phaser.io                 https://labs.phaser.io ');
+
+// Add a custom footer
+v.log('{bgCyan}{black} Have a great coding session! ');
